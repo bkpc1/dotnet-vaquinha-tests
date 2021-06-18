@@ -19,6 +19,8 @@ namespace Vaquinha.Service
 
         public AsyncRetryPolicy CriarPoliticaWaitAndRetryPara(string method)
         {
+int.Parse
+
             var policy = Policy.Handle<Exception>().WaitAndRetryAsync(_globallAppConfig.Polly.QuantidadeRetry,
                 attempt => TimeSpan.FromSeconds(_globallAppConfig.Polly.TempoDeEsperaEmSegundos),
                 (exception, calculatedWaitDuration) =>
